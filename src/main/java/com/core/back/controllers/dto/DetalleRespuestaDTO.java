@@ -2,7 +2,7 @@ package com.core.back.controllers.dto;
 
 import java.util.Date;
 
-public class Categoria {
+public class DetalleRespuestaDTO {
     private int id;
     private String nombre;
     private String descripcion;
@@ -49,7 +49,7 @@ public class Categoria {
         this.update_date = update_date;
     }
 
-    public Categoria(int id, String nombre, String descripcion, Date create_date, Date update_date) {
+    public DetalleRespuestaDTO(int id, String nombre, String descripcion, Date create_date, Date update_date) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -57,6 +57,6 @@ public class Categoria {
         this.update_date = update_date;
     }
 
-    public Categoria() {
+    public DetalleRespuestaDTO() {
     }
 }

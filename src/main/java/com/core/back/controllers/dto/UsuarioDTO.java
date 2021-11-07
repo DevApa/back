@@ -1,6 +1,6 @@
 package com.core.back.controllers.dto;
 
-public class Usuario {
+public class UsuarioDTO {
     private int id;
     private String nombres;
     private String apellidos;
@@ -8,11 +8,11 @@ public class Usuario {
     private String email;
     private String direccion;
 
-    public Usuario() {
+    public UsuarioDTO() {
 
     }
 
-    public Usuario(int id, String nombres, String apellidos, String identificacion, String email, String direccion) {
+    public UsuarioDTO(int id, String nombres, String apellidos, String identificacion, String email, String direccion) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;

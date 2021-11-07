@@ -2,8 +2,12 @@ package com.core.back.controllers.dto;
 
 import java.util.Date;
 
-public class AreaConocimiento {
+public class TipoDTO {
     private int id;
+    private String nombre;
+    private String descripcion;
+    private Date create_date;
+    private Date update_date;
 
     public int getId() {
         return id;
@@ -11,14 +15,6 @@ public class AreaConocimiento {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getId_carrera() {
-        return id_carrera;
-    }
-
-    public void setId_carrera(int id_carrera) {
-        this.id_carrera = id_carrera;
     }
 
     public String getNombre() {
@@ -53,21 +49,14 @@ public class AreaConocimiento {
         this.update_date = update_date;
     }
 
-    public AreaConocimiento(int id, int id_carrera, String nombre, String descripcion, Date create_date, Date update_date) {
+    public TipoDTO(int id, String nombre, String descripcion, Date create_date, Date update_date) {
         this.id = id;
-        this.id_carrera = id_carrera;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.create_date = create_date;
         this.update_date = update_date;
     }
 
-    public AreaConocimiento() {
+    public TipoDTO() {
     }
-
-    private int id_carrera;
-    private String nombre;
-    private String descripcion;
-    private Date create_date;
-    private Date update_date;
 }
