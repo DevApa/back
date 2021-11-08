@@ -26,12 +26,14 @@ public class OpenAPIConfig {
                         .contact(new Contact()
                                 .name("Carlos Aparicio Vivero")
                                 .email("carlos.aparicio@ug.edu.ec")
-                                .url("cmav.com"))
+                                .url("cmav.com")
+                        )
                         .license(new License()
                                 .name("http://www.gnu.org/licenses/gpl.html"))
                         )
                 .externalDocs(new ExternalDocumentation()
                         .description("API Rest Secoed")
-                        .url(""));
+                        .url("")
+                );
     }
 }

@@ -1,6 +1,6 @@
 package com.core.back.controllers.contract;
 
-import com.core.back.controllers.dto.UniversidadDTO;
+import com.core.back.controllers.dto.UniversityDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 public interface IUniversidad {
-    @GetMapping("api/secoed/univeridad/list")
+    @GetMapping("/list")
     @Operation(description = "Listado de universidades disponibles en el sistema")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversidadDTO.class)))),
+            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversityDTO.class)))),
             @ApiResponse(responseCode = "204", description = "No Hay Contenido"),
             @ApiResponse(responseCode = "500", description = "Error Interno", content = @Content(array = @ArraySchema(schema = @Schema(implementation = String.class)))),
     })
@@ -28,10 +28,10 @@ public interface IUniversidad {
     })
     public ResponseEntity<?> getUniversidades();
 
-    @PostMapping("api/secoed/univeridad/create")
+    @PostMapping("/create/{name}/{descripcion}")
     @Operation(description = "Agrega una nueva institución en el sistema")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "CREATED", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversidadDTO.class)))),
+            @ApiResponse(responseCode = "201", description = "CREATED", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversityDTO.class)))),
             @ApiResponse(responseCode = "204", description = "No Hay Contenido"),
             @ApiResponse(responseCode = "500", description = "Error Interno", content = @Content(array = @ArraySchema(schema = @Schema(implementation = String.class)))),
     })
@@ -39,12 +39,12 @@ public interface IUniversidad {
             @Parameter(name = "name", description = "Nombre de la institución académica", example = "Universidad Catolica de las Casas"),
             @Parameter(name = "descripcion", description = "Descripción de la institución académica", example = "Descripción breve de la institución"),
     })
-    public ResponseEntity<?> create(UniversidadDTO universidadDTO);
+    public ResponseEntity<?> create(UniversityDTO universityDTO);
 
-    @PutMapping("api/secoed/univeridad/update/")
+    @PutMapping("/update/{id}/{name}/{descripcion}")
     @Operation(description = "Agrega una nueva institución en el sistema")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversidadDTO.class)))),
+            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversityDTO.class)))),
             @ApiResponse(responseCode = "204", description = "No Hay Contenido"),
             @ApiResponse(responseCode = "500", description = "Error Interno", content = @Content(array = @ArraySchema(schema = @Schema(implementation = String.class)))),
     })
@@ -53,12 +53,12 @@ public interface IUniversidad {
             @Parameter(name = "name", description = "Nombre de la institución académica", example = "Universidad Catolica de las Casas"),
             @Parameter(name = "descripcion", description = "Descripción de la institución académica", example = "Descripción breve de la institución"),
     })
-    public ResponseEntity<?> update(UniversidadDTO universidadDTO);
+    public ResponseEntity<?> update(UniversityDTO universityDTO);
 
-    @DeleteMapping("api/secoed/univeridad/delete/")
+    @DeleteMapping("/delete/{id}")
     @Operation(description = "Agrega una nueva institución en el sistema")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversidadDTO.class)))),
+            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UniversityDTO.class)))),
             @ApiResponse(responseCode = "204", description = "No Hay Contenido"),
             @ApiResponse(responseCode = "500", description = "Error Interno", content = @Content(array = @ArraySchema(schema = @Schema(implementation = String.class)))),
     })
