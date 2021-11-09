@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.math.BigInteger;
 import java.util.List;
 
-public interface IUninversidadRepository extends JpaRepository<University, BigInteger> {
+public interface IUninversityRepository extends JpaRepository<University, BigInteger> {
     /**
      * Para realizar consultas por filtros con fechas se pueden emplear las siguientes implementaciones
      * @Query("SELECT m FROM University m WHERE m.fecha_creacion BETWEEN :fechaInicio AND :fechaFin")

@@ -9,26 +9,25 @@ import java.util.Date;
 
 @Entity
 @Tag(name = "universidad")
-public class University implements Serializable {
-
-    private static final long serialVersionUID =1l;
+public class University implements Serializable{
 
     @Id
-    @Column(name = "id_universidad", unique = true)
+    @Column(name = "id", unique = true)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private BigInteger id;
 
-    @Column(name = "nombre_intitucion")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "nombre_intitucion")
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Column(name = "nombre_intitucion")
-    @Temporal(TemporalType.DATE.TIMESTAMP)
+    @Column(name = "fecha_creacion")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date create_date;
-    @Column(name = "nombre_intitucion")
-    @Temporal(TemporalType.DATE.TIMESTAMP)
+
+    @Column(name = "fecha_modificacion")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date update_date;
 
     public BigInteger getId() {
