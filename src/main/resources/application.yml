@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgres.//localhost:5432/db_secoed
+    url: jdbc:postgresql://localhost:5432/db_secoed
     username: dba
     password: dba2021
     driver-class-name: org.postgresql.Driver
